@@ -63,12 +63,12 @@ Uncomment and modify:
 
 ### Prerequisites
 1. **Static DNS Setup** (Use [DuckDNS](https://www.duckdns.org/))
-2. **Port Forwarding #1(OpenVPN)** in router settings:
+2.1 **Port Forwarding #1(OpenVPN)** in router settings:
    - Protocol: UDP
    - WAN Port: 1194
    - LAN Host: [Your Pi's local IP]
    - LAN Port: 1194
-**Port Forwarding #2(WireGuard)** in router settings:
+2.2 **Port Forwarding #2(WireGuard)** in router settings:
    - Protocol: UDP
    - WAN Port: 51820
    - LAN Host: [Your Pi's local IP]
