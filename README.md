@@ -30,7 +30,7 @@ ping google.com
 1. Access router at `192.168.1.1` (may vary)
 2. Change subnet to `192.168.0.0/24` or `192.168.222.0/24`
 3. Set static IP via `nmtui`:
-   ```bash
+   
    sudo nmtui
    ```
    - Select "Edit a connection"
@@ -63,11 +63,16 @@ Uncomment and modify:
 
 ### Prerequisites
 1. **Static DNS Setup** (Use [DuckDNS](https://www.duckdns.org/))
-2. **Port Forwarding** in router settings:
+2. **Port Forwarding #1(OpenVPN)** in router settings:
    - Protocol: UDP
    - WAN Port: 1194
-   - LAN Host: [Your Pi's IP]
+   - LAN Host: [Your Pi's local IP]
    - LAN Port: 1194
+   **Port Forwarding #2(WireGuard)** in router settings:
+   - Protocol: UDP
+   - WAN Port: 51820
+   - LAN Host: [Your Pi's local IP]
+   - LAN Port: 51820
 
 ### WireGuard Setup (Mobile Access)
 ```bash
@@ -105,15 +110,14 @@ sudo apt install network-manager-openvpn
 ```
 1. Import `client.ovpn` in Network Manager
 2. Connect via GUI interface
+[If you need additional help](https://www.youtube.com/watch?v=CBJMl9MILbg&t=560s)
 
 ## 💾 Backup & Recovery
 1. Use **Clonezilla** for system backups
-2. Before backup:
-   ```bash
-   sudo pishrink.sh -Za  # Shrink partition
-   ```
+2. Before backup, be sure to shrink partition to minimum possible using either gparted, parted or fdisk.
 3. Update fstab after restoration if needed
 4. Store backups on external drive
+[For visual learners!](https://www.youtube.com/watch?v=yQ9NpWZ74BU&t=349s)
 
 ## 💡 Pro Tips
 - `man [command]` is your best friend
@@ -135,7 +139,6 @@ sudo apt install network-manager-openvpn
 
 ---
 
-**Maintainer**: [Your Name]  
 **Special Thanks**: Leonard for the hardware gift!  
 
 *"The cloud is just someone else's computer - here's to making your own!"*
