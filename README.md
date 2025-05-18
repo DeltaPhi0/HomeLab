@@ -68,7 +68,7 @@ Uncomment and modify:
    - WAN Port: 1194
    - LAN Host: [Your Pi's local IP]
    - LAN Port: 1194
-   **Port Forwarding #2(WireGuard)** in router settings:
+**Port Forwarding #2(WireGuard)** in router settings:
    - Protocol: UDP
    - WAN Port: 51820
    - LAN Host: [Your Pi's local IP]
