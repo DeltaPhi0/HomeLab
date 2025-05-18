@@ -147,6 +147,4 @@ sudo apt install network-manager-openvpn
 ---
 
 **Special Thanks**: Leonard for the hardware gift!  
-
-*"The cloud is just someone else's computer...here's to making your own!"*
 ```
