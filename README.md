@@ -135,7 +135,7 @@ sudo apt install network-manager-openvpn
   sudo apt update && sudo apt upgrade -y
   ```
 - Use fail2ban for intrusion prevention
-- **Warning:** Only share VPN access with trusted users
+- **Warning:** Only share VPN access with trusted users!! (e.g. I personally share it with my brother and a friend of mine, so they can access to my media too.)
 
 ---
 
