@@ -61,8 +61,13 @@ Uncomment and modify:
 
 ## 🌐 VPN Configuration
 
+### Why do I need it?
+1. **Safety :** It makes it even harder for snoopers to get inside
+2. **Remote access :** You can control your server outside of your local connection without endangering it's safety
+3. **It's cool :** No one at parties is going to praise you because you have your own VPN, but it seriously is cool!
+
 ### Prerequisites
-1. **Static DNS setup** (Use [DuckDNS](https://www.duckdns.org/))
+1. **Static DNS setup** (I used [DuckDNS](https://www.duckdns.org/))
 2. **Port forwarding #1(OpenVPN)** in router settings:
    - Protocol: UDP
    - WAN Port: 1194
