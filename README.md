@@ -27,10 +27,12 @@ nmap -sn 192.168.1.0/24
 ping google.com
 
 ### 3. Router Settings
+```
 1. Access router at `192.168.1.1` (may vary)
 2. Change subnet to `192.168.0.0/24` or `192.168.222.0/24`
 3. Set static IP via `nmtui`:
-4. sudo nmtui
+```bash
+sudo nmtui
    ```
    - Select "Edit a connection"
    - Configure manual IP (e.g., `192.168.0.100`)
