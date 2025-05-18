@@ -1,4 +1,4 @@
-```markdown
+
 # Raspberry Pi 3 Headless Server Setup Guide  
 *Last Updated: May 6, 2025*  
 
@@ -25,7 +25,6 @@ nmap -sn 192.168.1.0/24
 
 # Test connectivity
 ping google.com
-```
 
 ### 3. Router Settings
 1. Access router at `192.168.1.1` (may vary)
