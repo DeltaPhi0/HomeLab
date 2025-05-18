@@ -13,7 +13,7 @@
 
 ### 1. OS Installation
 1. Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-2. Choose **Debian Bookworm (headless)** version
+2. Choose **Choose Raspberry Pi OS Lite (64-bit) - Debian Bookworm based** version
 3. Write to SD card
 
 *Note: Failed Ubuntu Server installation due to HDMI issues led to this choice*
@@ -28,7 +28,7 @@ ping google.com
 ```
 ### 3. Router Settings
 1. Access router at `192.168.1.1` (may vary)
-2. Change subnet to `192.168.0.0/24` or `192.168.222.0/24`
+2. Change subnet to `192.168.0.0/24` or `192.168.222.0/24` (be sure to not choose a conflicting subnet)
 3. Set static IP via `nmtui`:
 ```bash
 sudo nmtui
@@ -63,12 +63,12 @@ Uncomment and modify:
 
 ### Prerequisites
 1. **Static DNS Setup** (Use [DuckDNS](https://www.duckdns.org/))
-2.1 **Port Forwarding #1(OpenVPN)** in router settings:
+2. **Port Forwarding #1(OpenVPN)** in router settings:
    - Protocol: UDP
    - WAN Port: 1194
    - LAN Host: [Your Pi's local IP]
    - LAN Port: 1194
-2.2 **Port Forwarding #2(WireGuard)** in router settings:
+3. **Port Forwarding #2(WireGuard)** in router settings:
    - Protocol: UDP
    - WAN Port: 51820
    - LAN Host: [Your Pi's local IP]
