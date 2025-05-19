@@ -1,8 +1,27 @@
 
 # Raspberry Pi Headless Server Setup Guide  
-*Last Updated: May 18, 2025*  
-
+*Last Updated: May 19, 2025*  
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi%203-CC3542?logo=raspberrypi&logoColor=white)
+
+---
+
+## 🔍 Table of Contents  
+1. [Why This Matters](#-why-this-matters)  
+2. [Hardware Specifications](#-hardware-specifications)  
+3. [Initial Setup](#%EF%B8%8F-initial-setup)  
+4. [Security & SSH](#-ssh-security-setup)  
+5. [VPN Setup](#-vpn-configuration)  
+6. [Backup & Recovery](#-backup--recovery)  
+
+---
+
+## 🌟 Why This Matters  
+Turn a **€40 Raspberry Pi** into a **secure homelab server** that:  
+- Self-hosts services (VPN/media/files) *without cloud fees*  
+- has solid security (SSH keys, VPN+local access only)  
+- Teaches real sysadmin skills 
+
+---
 
 ## 📦 Hardware specifications
 - **Device**: Raspberry Pi 3 Model B (1GB RAM)
@@ -61,10 +80,14 @@ Uncomment and modify:
 
 ## 🌐 VPN Configuration
 
-### Why do I need it?
-1. **Safety:** It makes it even harder for snoopers to get inside
-2. **Remote access:** You can control your server outside of your local connection without endangering it's safety
-3. **It's cool:** No one at parties is going to praise you because you have your own VPN, but it seriously is cool!
+### Why Set Up a VPN?
+
+1. **Lock Down Your Network**
+   - Adds an extra security layer to keep unwanted visitors out of your homelab
+2. **Access Your Lab Securely from Anywhere**
+   - Safely connect to your servers, files, or services remotely without exposing them to the open internet
+3. **A Practical Tech Flex**
+   - It’s not just for show, self-hosting a VPN demonstrates real world networking and security skills!
 
 ### Prerequisites
 1. **Static DNS setup** (I used [DuckDNS](https://www.duckdns.org/))
@@ -119,13 +142,13 @@ sudo apt install network-manager-openvpn
 
 ## 💾 Backup & recovery
 1. Before backing up, be sure to shrink partition to minimum possible using either gparted, parted or fdisk
-   - e.g. If you have 12.5GB storage, be sure to round it up to the next whole number, in this case, 13GB
+   - e.g. If you have 12.5GB storage, be sure to round it up to the next whole number (in this case, 13GB)
 2. Use **Clonezilla** for system backups, very intuitive and user friendly
-3. Update fstab after restoration if needed (for me it was my case)
-4. Store backups on external drive
+3. Update fstab after restoration if needed (personally, that has always been my case)
+4. Store backups on external drive. ALWAYS remember about the [3-2-1](https://www.veeam.com/blog/321-backup-rule.html) rule. <br>
 [For visual learners!](https://www.youtube.com/watch?v=yQ9NpWZ74BU&t=349s)
 
-## 💡 ALWAYS remember
+## 💡 Remember
 - `man [command]` is your best friend
 - Use `grep` for quick searches:  
   ```bash
