@@ -133,7 +133,7 @@ scp user@your-pi-ip:client.ovpn ~/
 sudo apt install network-manager-openvpn
 ```
 1. Import `client.ovpn` in Network Manager
-2. Connect via GUI interface
+2. Connect via GUI interface  
 [If you need additional help](https://www.youtube.com/watch?v=CBJMl9MILbg&t=560s)
 
 ## 💾 Backup & recovery
