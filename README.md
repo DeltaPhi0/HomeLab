@@ -3,25 +3,21 @@
 *Last Updated: May 19, 2025*  
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi%203-CC3542?logo=raspberrypi&logoColor=white)
 
----
-
 ## 🔍 Table of Contents  
-1. [Why This Matters](#-why-this-matters)  
-2. [Hardware Specifications](#-hardware-specifications)  
-3. [Initial Setup](#%EF%B8%8F-initial-setup)  
-4. [Security & SSH](#-ssh-security-setup)  
-5. [VPN Setup](#-vpn-configuration)  
-6. [Backup & Recovery](#-backup--recovery)  
-
----
+[Why This Matters](#-why-this-matters)  
+[Hardware Specifications](#-hardware-specifications)  
+[Initial Setup](#%EF%B8%8F-initial-setup)  
+[Security & SSH](#-ssh-security-setup)  
+[VPN Setup](#-vpn-configuration)  
+[Backup & Recovery](#-backup--recovery)  
+[Important security notes](#-important-security-notes)  
+[Remember](#-remember)
 
 ## 🌟 Why This Matters  
 Turn a **€40 Raspberry Pi** into a **secure homelab server** that:  
 - Self-hosts services (VPN/media/files) *without cloud fees*  
 - has solid security (SSH keys, VPN+local access only)  
 - Teaches real sysadmin skills 
-
----
 
 ## 📦 Hardware specifications
 - **Device**: Raspberry Pi 3 Model B (1GB RAM)
@@ -148,15 +144,6 @@ sudo apt install network-manager-openvpn
 4. Store backups on external drive. ALWAYS remember about the [3-2-1](https://www.veeam.com/blog/321-backup-rule.html) rule. <br>
 [For visual learners!](https://www.youtube.com/watch?v=yQ9NpWZ74BU&t=349s)
 
-## 💡 Remember
-- `man [command]` is your best friend
-- Use `grep` for quick searches:  
-  ```bash
-  command | grep -i error
-  ```
-- Always verify commands from untrusted sources
-- Keep a setup journal for future reference
-
 ## 🚨 Important security notes
 - Never share your private SSH key
 - Regularly update packages:
@@ -167,7 +154,16 @@ sudo apt install network-manager-openvpn
 - **Warning:** Only share VPN access with trusted users!!
 - (e.g. I personally share it with my brother and a friend of mine, so they can access to my media too.)
 
----
 
-**Special Thanks**: Leonard for the hardware gift!  
-```
+## 💡 Remember
+- `man [command]` is your best friend
+- Use `grep` for quick searches:  
+  ```bash
+  command | grep -i error
+  ```
+- Always verify commands from untrusted sources
+- Keep a setup journal for future reference
+
+---
+  
+**Special Thanks to Leonard for the hardware gift!**  
