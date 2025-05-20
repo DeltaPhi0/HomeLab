@@ -16,8 +16,6 @@
    
 [Media Server](#-media-server)  
 
-[Media Installation Guide](#-media-installation-guide)  
-
 [Backup & Recovery](#-backup--recovery)  
 
 [Important Security Notes](#-important-security-notes)  
@@ -191,7 +189,7 @@ sudo apt install network-manager-openvpn
 
 ---
 
-## 🔗 Media installation guide
+### 🔗 Media installation guide
 
 **For step-by-step guides to recreate this setup:**  
 
