@@ -1,6 +1,6 @@
 
 # Raspberry Pi Headless Server Setup Guide  
-*Last Updated: May 19, 2025*  
+*Last Updated: May 20, 2025*  
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi%203-CC3542?logo=raspberrypi&logoColor=white)
 
 ## 🔍 Table of Contents  
