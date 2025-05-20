@@ -46,17 +46,21 @@ Turn a **€40 Raspberry Pi** into a **secure homelab server** that:
 ```bash
 # Find your Pi's IP (after first boot)
 nmap -sn 192.168.1.1/24
-
+```
+### 3. SSH into server
+**Ready to access your server for the first time?**
+```bash
+ssh username@pi-ip
 # Test connectivity
 ping google.com
 ```
-### 3. Router settings
+### 4. Router settings
 1. Access router at `192.168.1.1` (may vary)
 2. Change subnet to `192.168.0.1/24` or `192.168.222.1/24` (be sure to not choose a conflicting subnet)
 3. Set static IP via `nmtui`:
 ```bash
 sudo nmtui
-   ```
+```
    - Select "Edit a connection"
    - Configure manual IP (e.g., `192.168.0.100`)
 
@@ -68,17 +72,11 @@ sudo nano /etc/hosts
 ```
 Add line:  
 `192.168.0.100 your-hostname`
-
 ### 2. SSH key authentication
 **Client machine:**
 ```bash
 ssh-keygen -t rsa -b 2048
 ssh-copy-id username@hostname
-```
-### 3. SSH into server
-**Ready to access your server for the first time?**
-```bash
-ssh username@hostname
 ```
 **Server security:**
 ```bash
@@ -199,7 +197,7 @@ sudo apt install network-manager-openvpn
 - [Navidrome](media/navidrome/INSTALL.md) Music streaming  
 - [Calibre](media/calibre/INSTALL.md) eBook server  
 
-*📝 Note: Please follow these steps from top to bottom. I arranged them from easiest to hardest*
+*Note: Please follow these steps from top to bottom. I arranged them from easiest to hardest*
 
 ## 💾 Backup & recovery
 1. Before backing up, be sure to shrink partition to minimum possible using either gparted, parted or fdisk
