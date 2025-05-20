@@ -7,7 +7,7 @@
 ## ⚡️ Automatic installation
    ### For those who prefer a one-command installation, I've created an automated bash script that handles most of the process
    ```bash
-   wget https://github.com/DeltaPhi0/homelab/installation.sh
+   wget https://github.com/DeltaPhi0/homelab/jellyfin/installation.sh
    chmod +x installation.sh
    sudo ./installation.sh
    ```
