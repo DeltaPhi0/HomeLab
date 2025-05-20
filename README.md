@@ -9,7 +9,7 @@
 [Initial Setup](#%EF%B8%8F-initial-setup)  
 [Security & SSH](#-ssh-security-setup)  
 [VPN Setup](#-vpn-configuration)  
-[Media Server Setup](#-media-server-setup)  
+[Media Server](#-media-server)  
 [Backup & Recovery](#-backup--recovery)  
 [Important security notes](#-important-security-notes)  
 [Remember](#-remember)
@@ -141,16 +141,57 @@ sudo apt install network-manager-openvpn
 2. Connect via GUI interface  
 [If you need additional help](https://www.youtube.com/watch?v=CBJMl9MILbg&t=560s)
 
-## 🎥 Media server setup
+## 🎥 Media Server
 
-**See guides for:**
-- [Jellyfin](media/jellyfin/INSTALL.md)
-- [Samba](media/samba/INSTALL.md)
-- [Docker](media/docker/INSTALL.md)
-- [Navidrome](media/navidrome/INSTALL.md)
-- [Calibre](media/calibre/INSTALL.md)
+**This section in about my self hosted media and development environment, powered by Docker and a mix of awesome tools. Below are the key components, along with links to my tutorials for setting them up!**  
 
-_note: please follow these steps from top to bottom. I arranged them from easiest to hardest_
+---
+
+### 🎬 Media & Entertainment
+
+- **Jellyfin** – Personal media streaming for movies and TV shows  
+- **Navidrome** (`deluan/navidrome`) – Lightweight music server for streaming across devices  
+- **Podgrab** (`akhilrex/podgrab`) – Podcast downloader for offline listening  
+
+---
+
+### 📚 Reading & Productivity
+
+- **Calibre** – eBook management and server for my digital library  
+
+---
+
+### 🛠️ Development & Learning
+
+- **NGINX** – Local web development/deployment and reverse proxying  
+- **Dockerized Kali Linux** – Isolated security testing environment *(I avoid running Kali as my main OS. Sticking with Linux Mint/Debian for stability!)*  
+
+---
+
+### 🧰 Experimented With (But Retired)
+
+- **SambaShare** – Retired after switching to direct file access, but great for multi user cloud setups  
+- **Home Assistant + Portainer** – Briefly used for smart home automation *(successfully turned on a smart lightbulb and made people freak out by turning off my smart TV!)*  
+
+---
+
+### 🐳 Why Docker?
+
+> **I use Docker for isolation, scalability, and easy management. Check out my full Docker setup guide to replicate this stack!**
+
+---
+
+### 🔗 All Tutorials
+
+**For step-by-step guides to recreate this setup:**  
+
+- [Jellyfin](media/jellyfin/INSTALL.md) Server setup  
+- [Samba](media/samba/INSTALL.md) Multi user shares  
+- [Docker](media/docker/NOTES.md) Basics  
+- [Navidrome](media/navidrome/INSTALL.md) Music streaming  
+- [Calibre](media/calibre/INSTALL.md) eBook server  
+
+*📝 Note: Please follow these steps from top to bottom. I arranged them from easiest to hardest*
 
 ## 💾 Backup & recovery
 1. Before backing up, be sure to shrink partition to minimum possible using either gparted, parted or fdisk
