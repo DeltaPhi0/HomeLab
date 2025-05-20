@@ -145,10 +145,12 @@ sudo apt install network-manager-openvpn
 
 **See guides for:**
 - [Jellyfin](media/jellyfin/INSTALL.md)
+- [Samba](media/samba/INSTALL.md)
+- [Docker](media/docker/INSTALL.md)
 - [Navidrome](media/navidrome/INSTALL.md)
 - [Calibre](media/calibre/INSTALL.md)
-- [Samba](media/samba/INSTALL.md)
-- [Docker Notes](media/docker/INSTALL.md)
+
+_note: please follow these steps from top to bottom. I arranged them from easiest to hardest_
 
 ## 💾 Backup & recovery
 1. Before backing up, be sure to shrink partition to minimum possible using either gparted, parted or fdisk
