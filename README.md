@@ -9,7 +9,7 @@
 [Initial Setup](#%EF%B8%8F-initial-setup)  
 [Security & SSH](#-ssh-security-setup)  
 [VPN Setup](#-vpn-configuration)  
-[Media Server Setup](#media-server-setup)  
+[Media Server Setup](#-media-server-setup)  
 [Backup & Recovery](#-backup--recovery)  
 [Important security notes](#-important-security-notes)  
 [Remember](#-remember)
@@ -141,7 +141,7 @@ sudo apt install network-manager-openvpn
 2. Connect via GUI interface  
 [If you need additional help](https://www.youtube.com/watch?v=CBJMl9MILbg&t=560s)
 
-## 🗄️ Media server setup
+## 🎥 Media server setup
 
 **See guides for:**
 - [Jellyfin](media/jellyfin/INSTALL.md)
