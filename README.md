@@ -1,6 +1,6 @@
 
 # Raspberry Pi Headless Server Setup Guide  
-*Last Updated: May 19, 2025*  
+*Last Updated: May 20, 2025*  
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi%203-CC3542?logo=raspberrypi&logoColor=white)
 
 ## 🔍 Table of Contents  
@@ -28,7 +28,7 @@ Turn a **€40 Raspberry Pi** into a **secure homelab server** that:
 
 ### 1. OS installation
 1. Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-2. Choose **Choose Raspberry Pi OS Lite (64-bit) - Debian Bookworm based** version
+2. **Choose Raspberry Pi OS Lite (64-bit) - Debian Bookworm based** version
 3. Write to SD card
 
 *Note: Failed Ubuntu Server installation due to HDMI issues led to this choice*
@@ -36,14 +36,14 @@ Turn a **€40 Raspberry Pi** into a **secure homelab server** that:
 ### 2. Network configuration
 ```bash
 # Find your Pi's IP (after first boot)
-nmap -sn 192.168.1.0/24
+nmap -sn 192.168.1.1/24
 
 # Test connectivity
 ping google.com
 ```
 ### 3. Router settings
 1. Access router at `192.168.1.1` (may vary)
-2. Change subnet to `192.168.0.0/24` or `192.168.222.0/24` (be sure to not choose a conflicting subnet)
+2. Change subnet to `192.168.0.1/24` or `192.168.222.1/24` (be sure to not choose a conflicting subnet)
 3. Set static IP via `nmtui`:
 ```bash
 sudo nmtui
@@ -66,13 +66,17 @@ Add line:
 ssh-keygen -t rsa -b 2048
 ssh-copy-id username@hostname
 ```
-
+### 3. SSH into server
+**Ready to access your server for the first time?**
+```bash
+ssh username@hostname
+```
 **Server security:**
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
 Uncomment and modify:  
-`PasswordAuthentication no`
+`#PasswordAuthentication yes` `PasswordAuthentication no`
 
 ## 🌐 VPN Configuration
 
@@ -104,7 +108,7 @@ Uncomment and modify:
 sudo apt install pivpn
 
 # Configure PiVPN (choose WireGuard and DDNS domain)
-sudo pivpn add -n wgclient
+sudo pivpn add
 sudo pivpn -qr
 ```
 
@@ -129,11 +133,11 @@ sudo chmod 666 /dev/net/tun
 
 **Client:**
 ```bash
-scp user@your-pi-ip:client.ovpn ~/
+scp user@hostname:path/to/client.ovpn ~/
 sudo apt install network-manager-openvpn
 ```
 1. Import `client.ovpn` in Network Manager
-2. Connect via GUI interface
+2. Connect via GUI interface  
 [If you need additional help](https://www.youtube.com/watch?v=CBJMl9MILbg&t=560s)
 
 ## 💾 Backup & recovery
