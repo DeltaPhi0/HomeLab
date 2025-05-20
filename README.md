@@ -85,7 +85,7 @@ ssh-copy-id username@hostname
 sudo nano /etc/ssh/sshd_config
 ```
 Uncomment and modify:  
-`#PasswordAuthentication yes` `PasswordAuthentication no`
+`#PasswordAuthentication yes` → to → `PasswordAuthentication no`
 
 ## 🌐 VPN Configuration
 
