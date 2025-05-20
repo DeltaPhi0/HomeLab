@@ -5,14 +5,24 @@
 
 ## 🔍 Table of Contents  
 [Why This Matters](#-why-this-matters)  
+
 [Hardware Specifications](#-hardware-specifications)  
+
 [Initial Setup](#%EF%B8%8F-initial-setup)  
+
 [Security & SSH](#-ssh-security-setup)  
-[VPN Setup](#-vpn-configuration)  
+   
+   - [VPN Setup](#-vpn-configuration)  
+   
 [Media Server](#-media-server)  
+
+[Media Installation Guide](#-media-installation-guide)  
+
 [Backup & Recovery](#-backup--recovery)  
-[Important security notes](#-important-security-notes)  
-[Remember](#-remember)
+
+[Important Security Notes](#-important-security-notes)  
+
+[Pro Tips](#-pro-tips)
 
 ## 🌟 Why this matters  
 Turn a **€40 Raspberry Pi** into a **secure homelab server** that:  
@@ -181,7 +191,7 @@ sudo apt install network-manager-openvpn
 
 ---
 
-### 🔗 All Tutorials
+## 🔗 Media installation guide
 
 **For step-by-step guides to recreate this setup:**  
 
@@ -212,7 +222,7 @@ sudo apt install network-manager-openvpn
 - (e.g. I personally share it with my brother and a friend of mine, so they can access to my media too.)
 
 
-## 💡 Remember
+## 💡 Pro tips
 - `man [command]` is your best friend
 - Use `grep` for quick searches:  
   ```bash
