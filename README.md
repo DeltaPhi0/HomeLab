@@ -55,14 +55,16 @@ ssh username@pi-ip
 ping google.com
 ```
 ### 4. Router settings
-1. Access router at `192.168.1.1` (may vary)
-2. Change subnet to `192.168.0.1/24` or `192.168.222.1/24` (be sure to not choose a conflicting subnet)
-3. Set static IP via `nmtui`:
+1. Set static IP via `nmtui`:
 ```bash
 sudo nmtui
 ```
    - Select "Edit a connection"
-   - Configure manual IP (e.g., `192.168.0.100`)
+   - Configure manual IP (e.g., `192.168.0.100`)  
+     *it's important to do first, if you mix up steps you will not be able to use your pi since it will be cut off from the network*
+2. Access router at `192.168.1.1` (may vary)
+3. Change subnet to e.g. `192.168.0.1/24` (be sure to not choose a conflicting subnet)
+
 
 ## 🔒 SSH security setup
 
