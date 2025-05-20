@@ -76,7 +76,7 @@ ssh username@hostname
 sudo nano /etc/ssh/sshd_config
 ```
 Uncomment and modify:  
-`#PasswordAuthentication yes ->` `PasswordAuthentication no`
+`#PasswordAuthentication yes` `PasswordAuthentication no`
 
 ## 🌐 VPN Configuration
 
@@ -108,7 +108,7 @@ Uncomment and modify:
 sudo apt install pivpn
 
 # Configure PiVPN (choose WireGuard and DDNS domain)
-sudo pivpn add -n wgclient
+sudo pivpn add
 sudo pivpn -qr
 ```
 
@@ -133,7 +133,7 @@ sudo chmod 666 /dev/net/tun
 
 **Client:**
 ```bash
-scp user@your-pi-ip:client.ovpn ~/
+scp user@hostname:path/to/client.ovpn ~/
 sudo apt install network-manager-openvpn
 ```
 1. Import `client.ovpn` in Network Manager
