@@ -67,7 +67,7 @@ ssh-keygen -t rsa -b 2048
 ssh-copy-id username@hostname
 ```
 ### 3. SSH into server
-**Ready to access your server for the first time?
+**Ready to access your server for the first time?**
 ```bash
 ssh username@hostname
 ```
@@ -76,7 +76,7 @@ ssh username@hostname
 sudo nano /etc/ssh/sshd_config
 ```
 Uncomment and modify:  
-`PasswordAuthentication no`
+`#PasswordAuthentication yes ->` `PasswordAuthentication no`
 
 ## 🌐 VPN Configuration
 
