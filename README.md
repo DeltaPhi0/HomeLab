@@ -9,11 +9,12 @@
 [Initial Setup](#%EF%B8%8F-initial-setup)  
 [Security & SSH](#-ssh-security-setup)  
 [VPN Setup](#-vpn-configuration)  
+[Media Server Setup](#-media-server-setup)  
 [Backup & Recovery](#-backup--recovery)  
 [Important security notes](#-important-security-notes)  
 [Remember](#-remember)
 
-## 🌟 Why This Matters  
+## 🌟 Why this matters  
 Turn a **€40 Raspberry Pi** into a **secure homelab server** that:  
 - Self-hosts services (VPN/media/files) *without cloud fees*  
 - has solid security (SSH keys, VPN+local access only)  
@@ -139,6 +140,15 @@ sudo apt install network-manager-openvpn
 1. Import `client.ovpn` in Network Manager
 2. Connect via GUI interface  
 [If you need additional help](https://www.youtube.com/watch?v=CBJMl9MILbg&t=560s)
+
+## 🗄️ Media server setup
+
+**See guides for:**
+- [Jellyfin](media/jellyfin/INSTALL.md)
+- [Navidrome](media/navidrome/INSTALL.md)
+- [Calibre](media/calibre/INSTALL.md)
+- [Samba](media/samba/INSTALL.md)
+- [Docker Notes](media/docker/INSTALL.md)
 
 ## 💾 Backup & recovery
 1. Before backing up, be sure to shrink partition to minimum possible using either gparted, parted or fdisk
