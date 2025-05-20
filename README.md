@@ -28,7 +28,7 @@ Turn a **€40 Raspberry Pi** into a **secure homelab server** that:
 
 ### 1. OS installation
 1. Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-2. Choose **Choose Raspberry Pi OS Lite (64-bit) - Debian Bookworm based** version
+2. **Choose Raspberry Pi OS Lite (64-bit) - Debian Bookworm based** version
 3. Write to SD card
 
 *Note: Failed Ubuntu Server installation due to HDMI issues led to this choice*
@@ -36,14 +36,14 @@ Turn a **€40 Raspberry Pi** into a **secure homelab server** that:
 ### 2. Network configuration
 ```bash
 # Find your Pi's IP (after first boot)
-nmap -sn 192.168.1.0/24
+nmap -sn 192.168.1.1/24
 
 # Test connectivity
 ping google.com
 ```
 ### 3. Router settings
 1. Access router at `192.168.1.1` (may vary)
-2. Change subnet to `192.168.0.0/24` or `192.168.222.0/24` (be sure to not choose a conflicting subnet)
+2. Change subnet to `192.168.0.1/24` or `192.168.222.1/24` (be sure to not choose a conflicting subnet)
 3. Set static IP via `nmtui`:
 ```bash
 sudo nmtui
@@ -66,7 +66,11 @@ Add line:
 ssh-keygen -t rsa -b 2048
 ssh-copy-id username@hostname
 ```
-
+### 3. SSH into server
+**Ready to access your server for the first time?
+```bash
+ssh username@hostname
+```
 **Server security:**
 ```bash
 sudo nano /etc/ssh/sshd_config
