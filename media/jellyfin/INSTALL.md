@@ -94,6 +94,6 @@ While technically supported, **iPhone users should note**:
 
 ## Enjoy your media!
 **Recommended next steps:**
-- Go onto the next step in the guide : ) (see [Samba](media/samba/INSTALL.md))
+- Go onto the next step in the guide : ) ( [Continue to Samba Setup →](media/samba/INSTALL.md) )
 
 *Note: This is part of my larger media server stack - follow the guides in order from top to bottom for easiest setup!*
