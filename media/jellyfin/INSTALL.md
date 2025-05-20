@@ -42,7 +42,7 @@ http://192.168.0.100:8096
 ```bash
 # Create base directories (adjust paths as needed)
 sudo mkdir -p /media/jellyfin/{movies,shows}
-sudo chown -R $USER:$USER /media  # Set proper permissions
+sudo chown -R $USER:$USER /media/jellyfin  # Set proper permissions
 ```
 
 ### 5. Link libraries in Jellyfin
@@ -51,7 +51,7 @@ sudo chown -R $USER:$USER /media  # Set proper permissions
    - **Movies** → `/media/jellyfin/movies`
    - **Shows** → `/media/jellyfin/shows`
 
-> Always use absolute paths like `/media/movies`
+> Always use absolute paths like `/media/jellyfin/movies`
 
 ---
 
@@ -78,7 +78,7 @@ While technically supported, **iPhone users should note**:
 **Common issues:**
 - **Permission Errors**:  
   ```bash
-  sudo chmod -R 755 /media
+  sudo chmod -R 755 /media/jellyfin
   ```
   
 - **Port conflicts**:  
