@@ -6,12 +6,12 @@
 ---
 ## ⚡️ Automatic installation
    ### For those who prefer a one-command installation, I've created an automated bash script that handles most of the process
+   ### ⚠️ Review the code before running any script you find online!
    ```bash
    wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/installation.sh
    chmod +x installation.sh
    sudo ./installation.sh
    ```
-## ⚠️ Review the code before running any script you find online!
 
 ## 🚀 Quick installation
 
