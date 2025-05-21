@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "What's yout username?"
 read USR
 sudo apt install samba
