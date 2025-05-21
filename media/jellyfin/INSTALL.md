@@ -8,13 +8,11 @@
    ### For those who prefer a one-command installation, I've created an automated bash script that handles most of the process
    ### ⚠️ Review the code before running any script you find online!
    ```bash
-   sudo apt update
    wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/installation.sh
    chmod +x installation.sh
-   ./installation.sh
-   sudo apt upgrade -y
+   sudo ./installation.sh
    ```
-*change apt to your system’s package manager if needed*
+*Note : this script works only if you have a Debian based OS*
 ## 🚀 Quick installation
 
 ### 1. Install Jellyfin server
