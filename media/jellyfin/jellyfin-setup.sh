@@ -5,6 +5,16 @@ read -p "Do you want to read the script? [y/n]: " answer
 
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     curl -s https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/jellyfin-setup.sh
+    read -p "Do you want to continue? [y/n]: " answer2
+
+    if [[ "$answer2" =~ ^[Yy]$ ]]; then
+        echo "Enjoy Jellyfin"
+    elif [[ "$answer" =~ ^[Nn]$ ]]; then
+        echo "Have a good day"
+        exit 0
+    else
+        echo "Invalid input. Please enter y or n."
+    fi
 elif [[ "$answer" =~ ^[Nn]$ ]]; then
     echo "Then let's proceed."
 else
