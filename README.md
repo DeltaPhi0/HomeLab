@@ -114,7 +114,7 @@ Uncomment and modify:
 ### WireGuard setup (Mobile access)
 ```bash
 # Install PiVPN
-sudo apt install pivpn
+curl -L https://install.pivpn.io | bash
 
 # Configure PiVPN (choose WireGuard and DDNS domain)
 sudo pivpn add
