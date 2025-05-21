@@ -7,3 +7,4 @@ read USR
 sudo chown -R $USR:$USR /media/jellyfin
 sudo chmod -R 755 /media/jellyfin
 sudo apt upgrade -y
+rm jellyfin-setup.sh
