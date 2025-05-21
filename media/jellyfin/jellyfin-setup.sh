@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! command -v apt >/dev/null; then
+    echo "This script is for Debian/Ubuntu systems with APT."
+    exit 1
+fi
 read -p "Do you want to read the script? [y/n]: " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     curl -s https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/jellyfin-setup.sh
@@ -24,3 +28,4 @@ sudo chown -R $USR:$USR /media/jellyfin
 sudo chmod -R 755 /media/jellyfin
 sudo apt upgrade -y
 rm jellyfin-setup.sh
+echo "Jellyfin installation complete. Visit http://[your-IP]:8096"
