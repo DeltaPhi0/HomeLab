@@ -9,7 +9,7 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 
     if [[ "$answer2" =~ ^[Yy]$ ]]; then
         echo "Enjoy Jellyfin"
-    elif [[ "$answer" =~ ^[Nn]$ ]]; then
+    elif [[ "$answer2" =~ ^[Nn]$ ]]; then
         echo "Have a good day"
         exit 0
     else
