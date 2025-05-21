@@ -1,7 +1,7 @@
 # Jellyfin Media Server Setup Guide
 
 **Self hosted media made easy**  
-*Last updated: May 20, 2025*
+*Last updated: May 21, 2025*
 
 ---
 ## ⚡️ Automatic installation
