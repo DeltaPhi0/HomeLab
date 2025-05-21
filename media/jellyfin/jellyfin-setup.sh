@@ -9,17 +9,13 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 
     if [[ "$answer2" =~ ^[Yy]$ ]]; then
         echo "Enjoy Jellyfin"
-    elif [[ "$answer2" =~ ^[Nn]$ ]]; then
+    else
         echo "Have a good day"
         rm jellyfin-setup.sh
         exit 0
-    else
-        echo "Invalid input. Please enter y or n."
     fi
-elif [[ "$answer" =~ ^[Nn]$ ]]; then
-    echo "Then let's proceed."
 else
-    echo "Invalid input. Please enter y or n."
+    echo "Then let's proceed."
 fi
 
 sudo apt update
