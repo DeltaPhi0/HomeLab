@@ -1,6 +1,5 @@
 #!/bin/bash
 read -p "Do you want to read the script? [y/n]: " answer
-
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     curl -s https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/jellyfin-setup.sh
     read -p "Do you want to continue? [y/n]: " answer2
