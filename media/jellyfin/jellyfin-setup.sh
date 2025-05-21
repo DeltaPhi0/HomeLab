@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "What is your machine's username?"
-read USR
 read -p "Do you want to read the script? [y/n]: " answer
 
 if [[ "$answer" =~ ^[Yy]$ ]]; then
@@ -18,6 +16,8 @@ else
     echo "Then let's proceed."
 fi
 
+echo "What is your machine's username?"
+read USR
 sudo apt update
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo mkdir -p /media/jellyfin/{movies,shows}
