@@ -11,6 +11,7 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
         echo "Enjoy Jellyfin"
     elif [[ "$answer2" =~ ^[Nn]$ ]]; then
         echo "Have a good day"
+        rm jellyfin-setup.sh
         exit 0
     else
         echo "Invalid input. Please enter y or n."
