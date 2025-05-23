@@ -6,7 +6,7 @@ if ! command -v apt >/dev/null; then
 fi
 read -p "Do you want to read the script? [y/n]: " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
-    curl -s https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/jellyfin-setup.sh
+    curl -s https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/samba/samba-setup.sh
     read -p "Do you want to continue? [y/n]: " answer2
 
     if [[ "$answer2" =~ ^[Yy]$ ]]; then
