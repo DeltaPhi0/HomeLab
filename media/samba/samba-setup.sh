@@ -30,4 +30,5 @@ sudo sed -i '/map to guest = bad user/c\    map to guest = never' /etc/samba/smb
 echo "enter your new samba username"
 sudo smbpasswd -a $USR
 sudo systemctl restart smbd
-echo -e "You can now access your files throught\nWindows : Map Network Drive, '\ \[your pi's IP]\ files'.\nmacOS : Open Finder >> Connect to Server >> smb://[pi's IP].\nLinux+Nemo : Files >> File >> Connect to Server >> fill in."
+echo -e "You can now access your files throught\nWindows : Map Network Drive, '\ \[your pi's IP]\ files'.\nmacOS : Open Finder >> Connect to Server >> smb://[pi's IP]."
+rm samba-setup-sh
