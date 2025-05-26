@@ -93,7 +93,7 @@ sudo systemctl enable docker
 
 ---
 
-## 🛠️ Troubleshooting
+## 🛠 Troubleshooting
  **Permission denied?**
 - Log out and back in (or reboot) after adding your user to the docker group.
 - Run groups to confirm you belong to the docker group.
