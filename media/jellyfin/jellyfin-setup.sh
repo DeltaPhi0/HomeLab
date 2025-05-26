@@ -1,24 +1,4 @@
 #!/bin/bash
-if ! command -v apt >/dev/null; then
-    echo "This script is for Debian/Ubuntu systems with APT."
-    exit 1
-fi
-read -p "Do you want to read the script? [y/n]: " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
-    curl -s https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/jellyfin/jellyfin-setup.sh
-    read -p "Do you want to continue? [y/n]: " answer2
-
-    if [[ "$answer2" =~ ^[Yy]$ ]]; then
-        echo "Enjoy Jellyfin"
-    else
-        echo "Have a good day"
-        rm jellyfin-setup.sh
-        exit 0
-    fi
-else
-    echo "Then let's proceed."
-fi
-
 echo "What is your machine's username?"
 read USR
 sudo apt update
