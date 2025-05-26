@@ -1,5 +1,6 @@
 # Navidrome Music Server Setup  
 **Self hosted music streaming made simple**  
+*Last updated: May 26, 2025*  
 <sub>Tested on Linux. Docker and Docker Compose must be installed.</sub>
 
 ## 🚀 Quick installation  
