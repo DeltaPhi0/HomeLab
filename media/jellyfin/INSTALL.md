@@ -1,7 +1,7 @@
 # Jellyfin Media Server Setup Guide
 
 **Self hosted media made easy**  
-*Last updated: May 21, 2025*
+*Last updated: May 26, 2025*
 
 ---
 ## ⚡️ Automatic installation
@@ -12,6 +12,23 @@
    chmod +x jellyfin-setup.sh
    sudo ./jellyfin-setup.sh
    ```
+<details>
+<summary>See jellyfin-setup.sh</summary>
+
+```bash
+echo "What is your machine's username?"
+read USR
+sudo apt update
+curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+sudo mkdir -p /media/jellyfin/{movies,shows}
+sudo chown -R $USR:$USR /media/jellyfin
+sudo chmod -R 755 /media/jellyfin
+sudo apt upgrade -y
+rm jellyfin-setup.sh
+echo "Jellyfin installation complete. Visit http://[your-IP]:8096"
+```
+</details>
+
 *Note : this script works only if you have a Debian based OS*
 ## 🚀 Quick installation
 
