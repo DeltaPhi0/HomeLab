@@ -1,5 +1,6 @@
 # Navidrome Music Server Setup  
 **Self hosted music streaming made simple**  
+<sub>Tested on Linux. Docker and Docker Compose must be installed.</sub>
 
 ## 🚀 Quick installation  
 
@@ -16,6 +17,26 @@ wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/n
 sudo chmod 644 docker-compose.yaml
 sudo chown $USER:$USER docker-compose.yaml
 ```
+<details>
+<summary>See docker-compose.yaml</summary>
+
+```yaml
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    user: 1000:1000 # should be owner of volumes
+    ports:
+      - "4533:4533"
+    restart: unless-stopped
+    environment:
+      ND_LOGLEVEL: debug
+      ND_SCANSCHEDULE: 1h
+    volumes:
+      - "/media/navidrome/data:/data"
+      - "/media/navidrome/music:/music:ro"
+```
+</details>  
+
 ### 3. Start the server
 ```bash
 docker-compose up -d
@@ -44,12 +65,26 @@ Password: [your-password]
 ```bash
 wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/navidrome/Favorites.nsp -O /media/navidrome/music/favorites.nsp
 ```
+<details>
+<summary>See Favorites.nsp</summary>
+
+```nsp
+{
+    "any": [
+        {"is": {"loved": true}}
+    ],
+    "sort": "title"
+}
+```
+</details>
+
 ### 2. Restart server
 ```bash
-docker restart navidockerc-navidrome-1
+docker restart $(docker ps -qf "ancestor=deluan/navidrome")
 ```
+
 ## Enjoy your music!
 **Recommended next steps:**
 - Go onto the next step in the guide : ) ( [Continue to calibre Setup →](../calibre/INSTALL.md) )
 
-*Note: you can change a files metadata (e.g. artist, album name, title, etc..) using the command id3v2. man id3v2 for more information*
+*Note: you can change a file's metadata (e.g. artist, album name, title, etc..) using the command 'id3v2'.Run 'man id3v2' for more information*
