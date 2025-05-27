@@ -64,7 +64,7 @@ Password: [your-password]
 ## ⭐ Favorites Playlist Setup
 ### 1. Download this file, it will automatically save your favorite songs in a playlist of its own
 ```bash
-wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/navidrome/Favorites.nsp -O /media/navidrome/music/favorites.nsp
+wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/navidrome/Favorites.nsp -O /media/navidrome/music/favorites.json
 ```
 <details>
 <summary>See Favorites.nsp</summary>
