@@ -67,7 +67,7 @@ Password: [your-password]
 wget https://raw.githubusercontent.com/DeltaPhi0/homelab/refs/heads/main/media/navidrome/Favorites.nsp -O /media/navidrome/music/favorites.json
 ```
 <details>
-<summary>See Favorites.nsp</summary>
+<summary>See favorites.json</summary>
 
 ```nsp
 {
